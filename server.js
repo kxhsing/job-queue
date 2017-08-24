@@ -1,5 +1,8 @@
 var express    = require('express');        
-var app        = express();                 
+var app        = express(); 
+var morgan = require('morgan');
+app.use(morgan('combined'));     
+app.use(express.static('public'));         
 var bodyParser = require('body-parser');
 var Job = require('./app/models/job');
 var fetch = require('node-fetch');
@@ -29,7 +32,7 @@ app.get('/api/', function(req, res) {
     res.json({ message: 'Welcome to the job queue!' });   
 });
 
-// Create a job (accessed at POST http://localhost:8080/api/jobs)
+// Create a job (accessed at POST http://localhost:8080/api/jobs/)
 app.post('/api/jobs', function(req, res) {
 
         var new_job = new Job();      // create a new instance of the Job model
@@ -45,7 +48,7 @@ app.post('/api/jobs', function(req, res) {
 
             new_job_id = new_job._id;
 
-            res.json({ message: 'Job created. ID: '+new_job_id });
+            res.json({ message: 'Job created. Check below for status. ID: '+new_job_id });
         });
 
         //Fetch HTML for URL. Something to consider: {mode: 'no-cors'}?
@@ -54,8 +57,8 @@ app.post('/api/jobs', function(req, res) {
           .then((text) => {
             // console.log(text);
             new_job.data = text;  // update the job's data info
-            new_job.job_status = "Job completed!";
-            console.log("Job completed!");
+            new_job.job_status = "Completed!";
+            console.log("Completed!");
             new_job.save(function(err) {
                 if (err)
                     res.send(err);
@@ -96,14 +99,10 @@ app.delete('/api/jobs/:job_id', function(req, res) {
         });
     });
 
-app.get('/', function(req, res) {
-        res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
-    });
+app.get('/', function (req, res) {
+    res.sendfile('./public/index.html');
+  });
 
-
-// REGISTER OUR ROUTES -------------------------------
-// all of our routes will be prefixed with /api
-// app.use('/api', router);
 
 // START THE SERVER
 // =============================================================================
