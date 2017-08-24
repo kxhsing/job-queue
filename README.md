@@ -1,10 +1,8 @@
-# <img src="/public/img/initial.png">
-
 Job queue app for HTML data. Enter URL to receive a Job ID and check status and results of job.
+# <img src="/public/img/initial.png">
 
 ## Table of Contents
 * [Technologies](#technologies)
-* [Flow](#flow)
 * [Installation](#install)
 * [Author](#author)
 
@@ -13,13 +11,7 @@ Job queue app for HTML data. Enter URL to receive a Job ID and check status and 
 Backend: Node.js, Express, MongoDB
 Frontend: JavaScript (AngularJS), HTML5, CSS, Bootstrap<br/>
 
-## <a name="features"></a>Flow
-
-![alt tag](/public/img/url.png)
-![alt tag](/public/img/created.png)
-![alt tag](/public/img/status.png)
 ![alt tag](/public/img/final.png)
-
 
 ## <a name="install"></a>Installation
 
