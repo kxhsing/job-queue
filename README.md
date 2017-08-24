@@ -1,4 +1,4 @@
-# <img src="/app/img/initial.png">
+# <img src="/public/img/initial.png">
 
 Job queue app for HTML data. Enter URL to receive a Job ID and check status and results of job.
 
@@ -15,10 +15,10 @@ Frontend: JavaScript (AngularJS), HTML5, CSS, Bootstrap<br/>
 
 ## <a name="features"></a>Flow
 
-![alt tag](/app/img/url.png)
-![alt tag](/app/img/created.png)
-![alt tag](/app/img/status.png)
-![alt tag](/app/img/final.png)
+![alt tag](/public/img/url.png)
+![alt tag](/public/img/created.png)
+![alt tag](/public/img/status.png)
+![alt tag](/public/img/final.png)
 
 
 ## <a name="install"></a>Installation
