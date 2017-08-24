@@ -15,7 +15,6 @@
     <style>
         html                    { overflow-y:scroll; }
         body                    { padding-top:50px; }
-        #todo-list              { margin-bottom:30px; }
     </style>
 
     <!-- SPELLS -->
@@ -30,38 +29,30 @@
 <!-- SET THE CONTROLLER AND GET ALL TODOS -->
 <body>
     <div class="container" ng-controller="mainController">
-        <!-- HEADER AND TODO COUNT -->
         <div class="jumbotron text-center">
             <h1>Job Queue: HTML Data</h1><br>
             <h2> Jobs Ran: <span class="label label-info">{{jobs.length}}</span></h2>
         </div>
 
-        <!-- FORM TO CREATE TODOS -->
         <div id="job-form" class="row">
             <div class="col-sm-8 col-sm-offset-2 text-center">
                 <form>
                     <div class="form-group">
 
-                        <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
                         <input type="text" class="form-control input-lg text-center" placeholder="Enter URL" ng-model="formData.url">
                     </div>
 
-                    <!-- createToDo() WILL CREATE NEW TODOS -->
                     <button type="submit" class="btn btn-primary btn-lg" ng-click="createJob()">Add</button>
                 </form>
             </div>
         </div>
         <div ng-show="message" class="alert alert-success">{{ message }}</div>
-
     </div>
 
     <div class="container" ng-controller="checkController">
-        <!-- HEADER AND TODO COUNT -->
         <div class="text-center">
             <span><h3>Check Job Status & Results</span></h3>
         </div>
-
-        <!-- FORM TO CREATE TODOS -->
         <div id="check-form" class="row">
             <div class="col-sm-8 col-sm-offset-2 text-center">
                 <form>
