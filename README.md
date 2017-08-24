@@ -8,7 +8,7 @@ Job queue app for HTML data. Enter URL to receive a Job ID and check status and 
 
 ## <a name="technologies"></a>Technologies
 
-Backend: Node.js, Express, MongoDB
+Backend: Node.js, Express, MongoDB<br/>
 Frontend: JavaScript (AngularJS), HTML5, CSS, Bootstrap<br/>
 
 ![alt tag](/public/img/final.png)
@@ -41,7 +41,7 @@ Run the database
 mongod
 ```
 
-Run the app:
+In a separate window, run the app:
 
 ```
 node server.js
