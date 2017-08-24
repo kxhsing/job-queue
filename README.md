@@ -13,6 +13,8 @@ Frontend: JavaScript (AngularJS), HTML5, CSS, Bootstrap<br/>
 
 ![alt tag](/public/img/final.png)
 
+More screenshots on how the app should look located in the /public/img folder.
+
 ## <a name="install"></a>Installation
 
 To run the job queue:
