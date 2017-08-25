@@ -13,7 +13,7 @@ jobController.controller('mainController', function($scope, $http, Jobs) {
                 console.log('Error: ' + data);
             });
 
-        // when submitting the add form, send the text to the node API
+        // when submitting the add form, send the url to the node API to create a job
         $scope.createJob = function() {
             Jobs.create($scope.formData)
                 .success(function(data) {
@@ -29,7 +29,7 @@ jobController.controller('mainController', function($scope, $http, Jobs) {
 
 jobController.controller('checkController', function($scope, $http, Jobs) {
 
-        // when submitting the add form, send the url to the node API
+        // when submitting the check form, send the ID to the node API for status and results
         $scope.getJob = function() {
             console.log($scope.formData);
             Jobs.findOne($scope.formData)
