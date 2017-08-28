@@ -2,10 +2,12 @@
   "name": "node-api",
   "main": "server.js",
   "dependencies": {
+    "async": "^2.5.0",
     "body-parser": "~1.0.1",
     "express": "^4.0.0",
     "mongoose": "~4.7.3",
-    "node-fetch": "^1.7.2"
+    "morgan": "^1.8.2",
+    "node-fetch": "^1.7.2",
   },
   "scripts": {
     "start": "node server.js"
